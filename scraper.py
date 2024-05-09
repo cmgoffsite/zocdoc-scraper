@@ -1,9 +1,16 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import csv
 from urllib.parse import urlparse
+
+# Create a Chrome driver service
+service = webdriver.Chrome(ChromeDriverManager().install())
+
+# Initialize Chrome WebDriver with the service
+driver = webdriver.Chrome(service=service)
 
 def scrape_zocdoc_data(driver):
     # Find elements with the specified class name
