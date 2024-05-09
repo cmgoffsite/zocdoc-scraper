@@ -1,0 +1,5 @@
+streamlit
+selenium
+csv
+urllib.parse
+base64
